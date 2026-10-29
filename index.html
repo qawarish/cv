@@ -177,6 +177,39 @@
     .contact{justify-content:center;text-align:center}
     .socials{margin-inline-start:0}
   }
+
+  /* ---------- v2 additions ---------- */
+  .titles{color:var(--navy);font-weight:600;font-size:16px;margin:-4px 0 8px}
+  .reach{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:14.5px;margin-bottom:22px}
+  .reach a{border-bottom:1px solid rgba(13,43,74,.3)}
+  .reach a:hover{border-bottom-color:var(--navy)}
+  .explain{font-size:16.5px;font-weight:600;color:var(--navy);margin-bottom:12px}
+  .nums{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .num{background:var(--tint);border-radius:4px;padding:20px 22px;display:block}
+  .num strong{display:block;color:var(--navy);font-size:22px;font-weight:700;line-height:1.5;margin-bottom:6px}
+  .num p{font-size:15.5px;line-height:1.8}
+  .num .lk{vertical-align:-7px;margin-inline-start:4px}
+  a.num:hover strong{text-decoration:underline;text-underline-offset:6px}
+  ul.dev{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:16px 40px}
+  ul.dev li{border-inline-start:3px solid var(--navy);padding-inline-start:14px;font-size:16px}
+  ul.dev b{color:var(--navy);font-weight:700}
+  .roles{grid-template-columns:1fr;gap:0}
+  .role{padding:26px 0}
+  .role + .role{border-top:1.5px solid rgba(13,43,74,.2)}
+  .role:first-child{padding-top:0}
+  .role .lede{font-weight:600;margin-bottom:6px}
+  .role ul{padding-inline-start:20px;font-size:16px}
+  .role li{margin-bottom:4px;text-align:justify}
+  .role li::marker{color:var(--navy)}
+  .edu p{margin-bottom:6px}
+  .edu b{color:var(--navy);font-weight:700}
+  .titles,.reach{margin-inline-end:185px}
+  @media (max-width:720px){
+    .titles,.reach{margin-inline-end:0}
+    .role li,.bio,.role p,ul.ach .t{text-align:start}
+    .nums,ul.dev{grid-template-columns:1fr}
+    .num strong{font-size:20px}
+  }
 </style>
 </head>
 <body>
@@ -185,12 +218,20 @@
   <div class="hero">
     <div class="who">
       <h1>من هو نوّاف قوارش؟</h1>
+      <p class="titles">مدير محتوى | قائد فرق كتابة | مدرّب كتابة تسويقية</p>
+      <p class="reach">
+        <a href="mailto:qawarish@gmail.com">qawarish@gmail.com</a>
+        <a href="https://iwtsp.com/966536162427" target="_blank" rel="noopener" dir="ltr">+966 53 616 2427</a>
+        <a href="https://www.linkedin.com/in/qawarish" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://pf.qawarish.com/" target="_blank" rel="noopener">ملف الأعمال: pf.qawarish.com</a>
+      </p>
       <div class="riddle">
         <span><b>إنسان،</b> ربما يعرف يكتب.</span>
         <span><b>إنسانٌ ربما،</b> يعرف يكتب.</span>
         <span><b>إنسانٌ ربما يعرف،</b> يكتب.</span>
       </div>
-      <p class="bio"><b>مدير محتوى التواصل الاجتماعي بشركة ثمانية (سابقًا).</b> خبرة تتجاوز عشرة أعوام في صناعة المحتوى الإبداعي وقيادة فرق الكتابة. طالب في مدرسة الجمهور، وخبير في كتابة الأدلة التحريرية واستراتيجيات المحتوى التسويقي، لتحويل رؤى العلامات التجارية إلى محتوى مؤثر يعزز هويتها ويدعم تموضعها ويحقّق أهدافها البيعية.</p>
+      <p class="explain">فاصلة واحدة غيّرت معنى الجملة ثلاث مرات! وهذا ما أفعله منذ أكثر من عشرة أعوام: أحرّك الكلمة حتى يتغيّر أثرها.</p>
+      <p class="bio">بدأت مهندسًا مدنيًا يحسب الأحمال، ثم صرت أحسب وزن الكلمة. أمضيت أربعة أعوام ونصفًا في ثمانية، من كبير كتّاب المحتوى التفاعلي إلى مدير محتوى التواصل الاجتماعي. كنت أقود الكتّاب، وأجيز ما يُنشر، وأكتب ما لا يحتمل الخطأ. <b>أبحث عن فريق محتوى أقوده، وكتّاب أدرّبهم حتى يكتبوا أفضل مني. صدقًا لا تسليكًا.</b></p>
     </div>
     <div class="hero-photo">
       <div class="doc-title">ذاتي السائرة</div>
@@ -201,70 +242,139 @@
 
 <main class="wrap">
 
+  <h2 class="band">أرقام لا تحتاج إلى بلاغة</h2>
+
+  <div class="nums">
+    <a class="num" href="https://whatsapp.com/channel/0029Va6YRaH1dAvzGwDuds40" target="_blank" rel="noopener">
+      <strong>من 0 إلى 500,000</strong>
+      <p>متابع لقناة واتساب ثمانية خلال عام واحد. أنا من أسّسها. <i class="lk" aria-hidden="true"></i></p>
+    </a>
+    <div class="num">
+      <strong>«الكرة في ملعب ثمانية»</strong>
+      <p>جملة عابرة اقترحتها على فريق رياضة ثمانية، فصارت شعارًا وقف أمامه ثلاثة وزراء.</p>
+    </div>
+    <div class="num">
+      <strong>منشور واحد</strong>
+      <p>لإطلاق الكتب الصوتية في راديو ثمانية، عدّه فريق النمو الأفضل تحميلًا بأقل تكلفة.</p>
+    </div>
+    <div class="num">
+      <strong>1.2 مليون مشاهدة</strong>
+      <p>لفيلم كتبته عن موسم الحج لشركة منى العقارية.</p>
+    </div>
+  </div>
+
+  <h2 class="band">كيف أطوّر فرق المحتوى؟</h2>
+
+  <ul class="dev">
+    <li><b>صوت واحد للعلامة:</b> أدلة تحريرية تجعل الفريق كله يكتب بنبرة مميزة يتعرّف عليها الجمهور وينجذب إليها.</li>
+    <li><b>إدارة لا تخنق الإبداع:</b> توجيه وتحرير وإجازة، مع مساحة يتنفّس فيها الكاتب.</li>
+    <li><b>تدريب كتّاب الإعلانات:</b> بإطلاق مواهبهم الكامنة، والتفريق بين الكتابة الأدبية والتسويقية والبيعية.</li>
+    <li><b>النصوص الحسّاسة:</b> البيانات الصحفية، والدعوات الرسمية، وتسمية الإنتاجات الجديدة.</li>
+  </ul>
+
   <h2 class="band">أهم محطّاتي المهنية</h2>
 
   <div class="roles">
     <div class="role">
-      <h3>مهندس مدني</h3>
-      <div><span class="org">شركة يحي عمر عبدالمعطي للمقاولات</span></div>
-      <div class="dates">ديسمبر 2015 - أبريل 2016</div>
-      <p>ممتنّ لكل لحظة قضيتها في تعلّم المنطق والحساب وسنن الكون في كلية الهندسة، وللخمسة أشهر الطويلة التي عملت بها مهندسًا، وتعلمت فيها دروسًا أكثر صلابةً من الخرسانة والحديد.</p>
-    </div>
-    <div class="role">
-      <h3>كاتب محتوى</h3>
-      <div><a class="linked" href="https://x.com/alahyaaksa?s=21&amp;t=8LO4eMeIaZrLLW7qcXnhwg" target="_blank" rel="noopener"><span class="org">جمعية مراكز الأحياء بمنطقة مكة <i class="lk" aria-hidden="true"></i></span></a></div>
-      <div class="dates">مايو 2017 - أغسطس 2021</div>
-      <p>مرحلة تحوّلت فيها من مهندس مدني إلى مهندس محتوى، وكتبت كل شيء، من محتوى المواقع والمدونات والمعارض، إلى الإعلانات والمنشورات. تخلّلها العمل بشكل مستقلّ مع جهات كثيرة.</p>
-    </div>
-    <div class="role">
-      <h3>كاتب محتوى أوّل</h3>
-      <div><a class="linked" href="https://x.com/_seetsa?s=21&amp;t=8LO4eMeIaZrLLW7qcXnhwg" target="_blank" rel="noopener"><span class="org">شركة صيت <i class="lk" aria-hidden="true"></i></span></a></div>
-      <div class="dates">أغسطس 2021 - ديسمبر 2021</div>
-      <p>رحلة قصيرة زمنيًا، كثيفة حجمًا، كنت فيها الكاتب الوحيد لمشاريع مع جهات كبرى، والأهم.. تعرّفت على عوالم سوق الرياض.</p>
+      <h3>مدير محتوى التواصل الاجتماعي</h3>
+      <div><a class="linked" href="https://x.com/thmanyah" target="_blank" rel="noopener"><span class="org">شركة ثمانية <i class="lk" aria-hidden="true"></i></span></a></div>
+      <div class="dates">نوفمبر 2024 - أغسطس 2026</div>
+      <p class="lede">كنت أستيقظ كل صباح مع محاولة جديدة لإدارة محتوى منصات ثمانية وفريقها بفاعلية أكبر وإبداع أعمق.</p>
+      <ul>
+        <li>قدت فريق الكتّاب: توجيه وتحرير وإجازة يومية لمعظم المنشورات والإعلانات الترويجية (المموّلة).</li>
+        <li>وضعت استراتيجيات المحتوى لمنصات التواصل، ووازنت بين الوصول وصوت العلامة والأهداف التجارية، فتجاوز وصولنا 5 مليارات في عام 2025.</li>
+        <li>كتبت النصوص الحسّاسة: البيانات الصحفية، والدعوات الرسمية، والمنشورات الأيقونية المهمة والمدوّية.</li>
+        <li>سمّيت الإنتاجات الجديدة وكتبت أوصافها التسويقية: نشرات بريدية، وبودكاست، ووثائقيات.</li>
+      </ul>
     </div>
     <div class="role">
       <h3>كبير كتّاب المحتوى التفاعلي</h3>
-      <div><a class="linked" href="https://x.com/thmanyah?s=21&amp;t=8LO4eMeIaZrLLW7qcXnhwg" target="_blank" rel="noopener"><span class="org">شركة ثمانية <i class="lk" aria-hidden="true"></i></span></a></div>
-      <div class="dates">يناير 2022 - ديسمبر 2024</div>
-      <p>محطة مهمة تحوّلت فيها إلى كاتب مختلف، يعمل بمعايير ثمانية، يحبها، يؤمن بقيمها، «ويشبهها». أسّست <a href="https://whatsapp.com/channel/0029Va6YRaH1dAvzGwDuds40" target="_blank" rel="noopener" class="inline-link">قناة واتساب ثمانية</a> (من 0 إلى 0.5 مليون متابع خلال عام)، وكتبت لجميع المنصات آلاف المنشورات المؤثرة والإعلانات الناجحة.</p>
+      <div><a class="linked" href="https://x.com/thmanyah" target="_blank" rel="noopener"><span class="org">شركة ثمانية <i class="lk" aria-hidden="true"></i></span></a></div>
+      <div class="dates">يناير 2022 - نوفمبر 2024</div>
+      <p class="lede">محطة تحوّلت فيها إلى كاتب مختلف، يعمل بمعايير ثمانية، يحبها، يؤمن بقيمها، «ويشبهها».</p>
+      <ul>
+        <li>بدأت كاتبًا مستقلًا لمدة شهر، وانتهى الشهر بتوظيفي كبيرًا لكتّاب المحتوى التفاعلي.</li>
+        <li>أسّست <a href="https://whatsapp.com/channel/0029Va6YRaH1dAvzGwDuds40" target="_blank" rel="noopener" class="inline-link">قناة واتساب ثمانية</a>: من صفر إلى 500 ألف متابع خلال عام.</li>
+        <li>كتبت آلاف المنشورات والإعلانات: حملة اشتراك ثمانية، وحملة التوظيف، وحملة راديو ثمانية، ونشرتا فنجان والسينمائية.</li>
+        <li>ابتكرت أفكار إعلانات الرعاة داخل النشرات والحلقات: أمازون، وسلّة، وكالو، وصفا للاستثمار، وودائع.</li>
+      </ul>
     </div>
-    <div class="role wide">
-      <h3>مدير محتوى التواصل الاجتماعي</h3>
-      <div><a class="linked" href="https://x.com/thmanyah?s=21&amp;t=8LO4eMeIaZrLLW7qcXnhwg" target="_blank" rel="noopener"><span class="org">شركة ثمانية <i class="lk" aria-hidden="true"></i></span></a></div>
-      <div class="dates">ديسمبر 2024 - أغسطس 2026</div>
-      <p>مرحلة فارقة أدرتُ فيها كتّاب محتوى ثمانية وأشرفت على جميع منشوراتها، كنت فيها أستيقظ كل صباح مع محاولة جديدة لإدارة محتوى منصات ثمانية وفريقها بفاعلية أكبر وإبداع أعمق. أضع الاستراتيجيات وأضبط البوصلة وأكتب النصوص الحسّاسة وأحدد أسماء الإنتاجات الجديدة وأوصافها التسويقية.</p>
+    <div class="role">
+      <h3>كاتب محتوى أوّل</h3>
+      <div><a class="linked" href="https://x.com/_seetsa" target="_blank" rel="noopener"><span class="org">شركة صيت <i class="lk" aria-hidden="true"></i></span></a></div>
+      <div class="dates">أغسطس 2021 - ديسمبر 2021</div>
+      <p class="lede">رحلة قصيرة زمنيًا، كثيفة حجمًا، كنت فيها الكاتب الوحيد لمشاريع مع جهات كبرى، والأهم.. تعرّفت على عوالم سوق الرياض.</p>
+      <ul>
+        <li>صغت نصوص العروض التي تكسب بها صيت المشاريع، قبل أن تتحوّل إلى فعاليات.</li>
+      </ul>
+    </div>
+    <div class="role">
+      <h3>كاتب محتوى</h3>
+      <div><a class="linked" href="https://x.com/alahyaaksa" target="_blank" rel="noopener"><span class="org">جمعية مراكز الأحياء بمنطقة مكة <i class="lk" aria-hidden="true"></i></span></a></div>
+      <div class="dates">مايو 2017 - أغسطس 2021</div>
+      <p class="lede">مرحلة تحوّلت فيها من مهندس مدني إلى مهندس محتوى.</p>
+      <ul>
+        <li>كتبت كل شيء حرفيًا: المواقع، والمدوّنات، والخطابات، والمعارض، والإعلانات، ومنشورات التواصل.</li>
+        <li>عملت مستقلًا مع جهات عديدة، منها مركز بلاغات العنف الأسري، وأسواق السدحان، وفطور فارس، وتطبيق ثواب، ونظام إنتلو، ومطعم زغاليل بإعلان من كلمتين: «تحب الحمام؟».</li>
+      </ul>
+    </div>
+    <div class="role">
+      <h3>مهندس مدني</h3>
+      <div><span class="org">شركة يحيى عمر عبدالمعطي للمقاولات</span></div>
+      <div class="dates">ديسمبر 2015 - أبريل 2016</div>
+      <p class="lede">خمسة أشهر طويلة عملت فيها مهندسًا، وتعلّمت فيها دروسًا أكثر صلابةً من الخرسانة والحديد.</p>
     </div>
   </div>
 
-  <h2 class="band">أهم إنجازاتي الكتابية</h2>
+  <h2 class="band">أعمال الويكند</h2>
 
   <p class="ach-intro">
-    <b>كتبت جميع أنواع المحتوى التسويقي:</b> من الأفلام والبروفايلات، إلى الإعلانات والمنشورات.
+    <b>تجارب خارجة عن السيطرة، مع جهات لا تقبل نصًا عاديًا.</b>
     <br>
-    <b>لجميع أنواع الجهات:</b> من الوزارات والهيئات، إلى المتاجر والمطاعم.
+    كتبت جميع أنواع المحتوى التسويقي، من الأفلام والبروفايلات إلى الإعلانات والمنشورات، لجميع أنواع الجهات، من الوزارات والهيئات إلى المتاجر والمطاعم.
   </p>
 
   <ul class="ach">
-    <li><a href="https://x.com/sharekwekteb/status/1488798239251906564?s=46&amp;t=p82qhL9huQnH15VnE0CxWA" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>نوَّهَت</b> جائزة الشارقة للإبداع العربي بإصداري الأول (الحياة غرقًا - مجموعة قصصية).</span></a></li>
-    <li><a href="https://x.com/mocliterature/status/1681268830100758528?s=61&amp;t=8LO4eMeIaZrLLW7qcXnhwg" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>رُشِّحت</b> من هيئة الأدب والنشر والترجمة للمشاركة في معتزلات الكتابة.</span></a></li>
-    <li><a href="https://x.com/macca_media/status/1454719099150405633?s=61&amp;t=8LO4eMeIaZrLLW7qcXnhwg" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>قدمتُ</b> ورش «إعداد المحتوى» لخريجي الإعلام من جامعة أم القرى.</span></a></li>
-    <li><a href="https://x.com/coffee_language/status/1784612805393387591?s=61&amp;t=8LO4eMeIaZrLLW7qcXnhwg" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>قدمتُ</b> أمسية حول «تفوّق الكاتب في زمن الذكاء الاصطناعي».</span></a></li>
-    <li><a href="https://www.instagram.com/p/DSTJtOxjA9y/?igsh=MWV4YTE0aDd2bGI4aQ==" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>قدمتُ</b> أمسية حول «الفرق بين الكتابة الأدبية والتسويقية».</span></a></li>
-    <li><a href="https://alharamain.gov.sa/public/?module=subj-ar&amp;main_subject=nw&amp;subject=subject_486405" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>تشرّفتُ</b> بكتابة نصوص كتاب «العبور الآمن»، الوثيقة التاريخية الاستثنائية.</span></a></li>
-    <li><a href="https://www.instagram.com/share/_dUKQ6rMG" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>كتبتُ</b> أقرب النصوص إلى قلبي، 99 مقالًا مكوّنًا من 199 كلمة، وبصدد تحويلها إلى كتاب.</span></a></li>
-    <li><a href="https://qawarish.com/" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>أطلقتُ</b> نشرة قوارش، مساحة أنشر فيها مقالة أسبوعية حول المحتوى التسويقي وأسراره.</span></a></li>
+    <li><a href="https://alharamain.gov.sa/public/?module=subj-ar&amp;main_subject=nw&amp;subject=subject_486405" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>الهيئة العامة للعناية بشؤون المسجد الحرام والمسجد النبوي:</b> نصوص كتاب «العبور الآمن»، الوثيقة التاريخية عن جائحة كورونا في الحرمين الشريفين، ووثائقي «مآثر ومشاعر في الحرمين الشريفين».</span></a></li>
+    <li class="nolink"><i class="lk" aria-hidden="true"></i><span class="t"><b>إمارة منطقة مكة المكرمة:</b> وثائقي حملة إنقاذ 56 مبنى آيلًا للسقوط في جدة التاريخية.</span></li>
+    <li class="nolink"><i class="lk" aria-hidden="true"></i><span class="t"><b>وزارة الصحة:</b> محتوى منشورات جائزة وعي.</span></li>
+    <li class="nolink"><i class="lk" aria-hidden="true"></i><span class="t"><b>شركة منى العقارية:</b> وثائقيات موسم الحج، أحدها تجاوز 1.2 مليون مشاهدة.</span></li>
+  </ul>
+
+  <h2 class="band">على المنصة</h2>
+
+  <ul class="ach">
+    <li><a href="https://x.com/macca_media/status/1454719099150405633" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>قدّمتُ</b> ورش «إعداد المحتوى» لخريجي الإعلام من جامعة أم القرى.</span></a></li>
+    <li><a href="https://x.com/coffee_language/status/1784612805393387591" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>قدّمتُ</b> أمسية «تفوّق الكاتب في زمن الذكاء الاصطناعي».</span></a></li>
+    <li><a href="https://www.instagram.com/p/DSTJtOxjA9y/" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>قدّمتُ</b> أمسية «الفرق بين الكتابة الأدبية والتسويقية».</span></a></li>
+  </ul>
+
+  <h2 class="band">ما كتبته لنفسي</h2>
+
+  <ul class="ach">
+    <li><a href="https://x.com/sharekwekteb/status/1488798239251906564" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>نوَّهَت</b> جائزة الشارقة للإبداع العربي بإصداري الأول «الحياة غرقًا» (مجموعة قصصية).</span></a></li>
+    <li><a href="https://x.com/mocliterature/status/1681268830100758528" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>رُشِّحت</b> من هيئة الأدب والنشر والترجمة للمشاركة في معتزلات الكتابة.</span></a></li>
+    <li><a href="https://www.instagram.com/share/_dUKQ6rMG" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>كتبتُ</b> أقرب النصوص إلى قلبي، 99 مقالًا كل مقال من 199 كلمة، وفي طريقها إلى كتاب.</span></a></li>
+    <li><a href="https://qawarish.com/" target="_blank" rel="noopener"><i class="lk" aria-hidden="true"></i><span class="t"><b>أطلقتُ</b> نشرة قوارش، مقالة كل أسبوع عن المحتوى التسويقي وأسراره.</span></a></li>
   </ul>
 
   <h2 class="band">أدوات وتطبيقات ساعدتني</h2>
 
   <div class="tools">
-    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 4v4.2M12 15.8V20M4 12h4.2M15.8 12H20M6.4 6.4l3 3M14.6 14.6l3 3M17.6 6.4l-3 3M9.4 14.6l-3 3"/></svg></span><p><b>Claude</b> | منجمي الخاص لبناء مهارات وتطبيقات تعمل بطريقتي وتضاعف إنتاجيّتي.</p></div>
-    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24"><path d="M3 17c2.5-6 5-9 9-9s6.5 3 9 9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="16.2" r="2.2" fill="currentColor"/></svg></span><p><b>Basecamp</b> | إدارة مشاريع المحتوى، التنسيق بين الفرق، ومتابعة المهام اليومية.</p></div>
-    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3.5H9.2a2.8 2.8 0 0 0 0 5.6H12zM12 3.5h2.8a2.8 2.8 0 0 1 0 5.6H12zM12 9.1H9.2a2.8 2.8 0 0 0 0 5.6H12zM12 14.7H9.2a2.8 2.8 0 1 0 2.8 2.8z"/><circle cx="14.8" cy="11.9" r="2.8"/></svg></span><p><b>Figma</b> | التعاون مع فريق التصميم ومراجعة المحتوى بصريًا ومناقشته.</p></div>
-    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><rect x="6.8" y="7" width="4.2" height="10" rx="1" fill="currentColor" stroke="none"/><rect x="13" y="7" width="4.2" height="6" rx="1" fill="currentColor" stroke="none"/></svg></span><p><b>Trello</b> | تنظيم سير العمل اليومي للمحتوى ومتابعة الإنتاج من الفكرة حتى النشر.</p></div>
-    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg></span><p><b>Happy Scribe</b> | تفريغ المحتوى الصوتي وتحويله إلى نص قابل للتحرير وإعادة التوظيف.</p></div>
-    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 20v-7"/><path d="M12 13c0-3.5-2.5-6-6.5-6C5.5 10.5 8 13 12 13z" fill="currentColor" stroke="none"/><path d="M12 11c0-3 2.2-5.2 5.8-5.2C17.8 8.8 15.6 11 12 11z"/></svg></span><p><b>Sprout Social</b> | جدولة المحتوى، متابعة الأداء، وقراءة الجمهور لاتخاذ قرارات أفضل.</p></div>
-    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"><path d="M13.5 10.5l-3 3"/><path d="M9.5 14.5l-1.8 1.8a3.2 3.2 0 0 1-4.5-4.5l2.6-2.6a3.2 3.2 0 0 1 4.5 0"/><path d="M14.5 9.5l1.8-1.8a3.2 3.2 0 0 1 4.5 4.5l-2.6 2.6a3.2 3.2 0 0 1-4.5 0"/></svg></span><p><b>Rebrandly</b> | إدارة الروابط المختصرة وتتبع استخدامها ضمن الحملات.</p></div>
+    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 4v4.2M12 15.8V20M4 12h4.2M15.8 12H20M6.4 6.4l3 3M14.6 14.6l3 3M17.6 6.4l-3 3M9.4 14.6l-3 3"/></svg></span><p><b>Claude</b> | منجمي الخاص لبناء مهارات وتطبيقات تعمل بطريقتي.</p></div>
+    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24"><path d="M3 17c2.5-6 5-9 9-9s6.5 3 9 9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="12" cy="16.2" r="2.2" fill="currentColor"/></svg></span><p><b>Basecamp</b> | إدارة مشاريع المحتوى والتنسيق بين الفرق.</p></div>
+    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M12 3.5H9.2a2.8 2.8 0 0 0 0 5.6H12zM12 3.5h2.8a2.8 2.8 0 0 1 0 5.6H12zM12 9.1H9.2a2.8 2.8 0 0 0 0 5.6H12zM12 14.7H9.2a2.8 2.8 0 1 0 2.8 2.8z"/><circle cx="14.8" cy="11.9" r="2.8"/></svg></span><p><b>Figma</b> | مراجعة المحتوى بصريًا مع فريق التصميم.</p></div>
+    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5"/><rect x="6.8" y="7" width="4.2" height="10" rx="1" fill="currentColor" stroke="none"/><rect x="13" y="7" width="4.2" height="6" rx="1" fill="currentColor" stroke="none"/></svg></span><p><b>Trello</b> | سير العمل اليومي من الفكرة حتى النشر.</p></div>
+    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 10v4M8 7v10M12 4v16M16 7v10M20 10v4"/></svg></span><p><b>Happy Scribe</b> | تحويل الصوت إلى نص قابل لإعادة التوظيف.</p></div>
+    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 20v-7"/><path d="M12 13c0-3.5-2.5-6-6.5-6C5.5 10.5 8 13 12 13z" fill="currentColor" stroke="none"/><path d="M12 11c0-3 2.2-5.2 5.8-5.2C17.8 8.8 15.6 11 12 11z"/></svg></span><p><b>Sprout Social</b> | الجدولة، وقراءة الأداء والجمهور.</p></div>
+    <div class="tool"><span class="tico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"><path d="M13.5 10.5l-3 3"/><path d="M9.5 14.5l-1.8 1.8a3.2 3.2 0 0 1-4.5-4.5l2.6-2.6a3.2 3.2 0 0 1 4.5 0"/><path d="M14.5 9.5l1.8-1.8a3.2 3.2 0 0 1 4.5 4.5l-2.6 2.6a3.2 3.2 0 0 1-4.5 0"/></svg></span><p><b>Rebrandly</b> | الروابط المختصرة وتتبّعها في الحملات.</p></div>
+  </div>
+
+  <h2 class="band">التعليم واللغات</h2>
+
+  <div class="edu">
+    <p><b>بكالوريوس الهندسة المدنية، جامعة أم القرى، 2016.</b> هناك تعلّمت المنطق والحساب وسنن الكون.</p>
+    <p><b>اللغات:</b> العربية (اللغة الأم)، والإنجليزية (جيد جدًا).</p>
   </div>
 
 </main>
